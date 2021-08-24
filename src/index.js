@@ -6,5 +6,6 @@ module.exports = {
 
     // Structures
     GVoiceChannel: require('./structures/GVoiceChannel.js'),
-    GVoiceConnection: require('./structures/GVoiceConnection.js')
+    GVoiceConnection: require('./structures/GVoiceConnection.js'),
+    GGStageChannel: require('./structures/GStageChannel')
 }

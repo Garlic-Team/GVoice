@@ -1,13 +1,13 @@
-const { VoiceChannel } = require('discord.js');
+const { StageChannel } = require('discord.js');
 const { joinVoiceChannel } = require('@discordjs/voice')
 
 /**
- * The GVoiceChnanel class
- * @extends VoiceChannel
+ * The GStageChannel class
+ * @extends StageChannel
  */
-class GVoiceChannel {
+class GStageChannel {
     constructor() {
-        Object.defineProperties(VoiceChannel.prototype, {
+        Object.defineProperties(StageChannel.prototype, {
             join: {
                 value: function() {
                     return joinVoiceChannel({
@@ -21,4 +21,4 @@ class GVoiceChannel {
     }
 }
 
-module.exports = GVoiceChannel;
+module.exports = GStageChannel;

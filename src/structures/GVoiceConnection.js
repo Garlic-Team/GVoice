@@ -1,12 +1,12 @@
-const { VoiceConnection, StreamType, createAudioPlayer } = require('@discordjs/voice')
+const { VoiceConnection, StreamType, createAudioPlayer, createAudioResource } = require('@discordjs/voice')
 
 /**
  * The GVoiceConnection class
  * @extends VoiceConnection
  */
-class GVoiceConnection extends VoiceConnection {
+class GVoiceConnection {
     constructor() {
-        Object.defineProperties(GVoiceConnection.prototype, {
+        Object.defineProperties(VoiceConnection.prototype, {
             play: {
                 value: function (stream) {
                     const resource = createAudioResource(stream, { inputType: StreamType.Arbitrary });
